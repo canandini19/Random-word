@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Word</title>
+    <style>
+        /* Optional styling */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wordDisplay">Your word is: <span id="randomWord"></span></div>
+
+    <script>
+        // Array of words to choose from
+        const words = ["inspire", "growth", "journey", "resilience", "focus", "harmony", "creativity", "gratitude", "balance", "wisdom"];
+
+        // Function to get a random word from the array
+        function getRandomWord() {
+            const randomIndex = Math.floor(Math.random() * words.length);
+            return words[randomIndex];
+        }
+
+        // Display the random word on page load
+        document.getElementById("randomWord").innerText = getRandomWord();
+    </script>
+</body>
+</html>
